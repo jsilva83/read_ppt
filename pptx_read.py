@@ -1,15 +1,16 @@
 # Import external modules.
 from pptx import Presentation
-import unicodedata as uni
 
 
 class PPTXRead:
 
     def __init__(self, in_file_name):
+        """"""
         self.presentation = Presentation(in_file_name)
         return
 
     def get_table_values(self, in_slide_nr) -> dict:
+        """"""
         out_dict = {}
         # Get the pointer to slide 'in_slide_nr'.
         a_slide = self.presentation.slides[in_slide_nr]
